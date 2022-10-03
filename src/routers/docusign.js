@@ -307,7 +307,7 @@ apiClient.setBasePath('https://demo.docusign.net/restapi');
 apiClient.setOAuthBasePath('account-d.docusign.com');
 const dsUserID = process.env.DOCUSIGN_USER_ID;
 const dsClientId = process.env.DOCUSIGN_INTEGRATION_KEY;
-const keySecrect = process.env.DOCUSIGN_PRIVATE_KEY;
+const keySecrect = process.env.DOCUSIGN_PRIVATE_KEY_3.replace(/\\n/g, '\n');
 
 const bufKeySecret = Buffer.from(keySecrect);
 const rsaKey = fs.readFileSync('./privateKey.txt');
